@@ -1,0 +1,9 @@
+node --> root node --> routerAP --> mesh_server
+using JSON over TCP and Mesh Routing
+
+mesh_server --> thingspeak
+MQTT (publish/subscribe) over TCP
+
+every 1min, each node send a message to a local server, it forwards
+the important data to ThingSpeak depending if src node is registrated
+in platform or not
